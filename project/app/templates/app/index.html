@@ -1,0 +1,12 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h2 class="text-info mb-4">Index</h2>
+
+    <div id="app">
+    </div>
+
+    <script src="{% static 'app/index.js' %}" type="text/babel"></script>
+{% endblock %}
+

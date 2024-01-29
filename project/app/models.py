@@ -24,6 +24,7 @@ class Note(models.Model):
     is_public = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    tags = models.ManyToManyField(Tag, blank=True, related_name="notes")
 
     def __str__(self):
         return f"{self.title} created by {self.owner.username} on {self.created_at}"
